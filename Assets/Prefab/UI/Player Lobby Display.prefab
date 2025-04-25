@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 5112008256028517854}
   - component: {fileID: 696496147138359805}
   - component: {fileID: 8621056006227177661}
+  - component: {fileID: 2574376449396586226}
   m_Layer: 5
   m_Name: Player Lobby Display
   m_TagString: Untagged
@@ -212,3 +213,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2574376449396586226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8438666481231362311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c8d986bf8c45794eb48c26791be86ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 9219189432624799441}
+  background: {fileID: 8621056006227177661}
+  affiliatedPlayer: {fileID: 0}

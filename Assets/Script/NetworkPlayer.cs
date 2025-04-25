@@ -15,20 +15,25 @@ public class NetworkPlayer : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
+        DontDestroyOnLoad(gameObject);
         if(IsOwner)
         {
-            Debug.Log("wiriting on playerName");
             networkPlayerName.Value = LobbyUI.Singleton.GetPlayerNameInput();
-            //ChatSystem.Singleton.localPlayer = this;
         }
         
         gameObject.name = "Player [" + networkPlayerName.Value + "]";
         networkPlayerName.OnValueChanged += NetworkPlayerName_OnValueChanged;
+        isReady.OnValueChanged += IsReady_OnValueChanged;
     }
 
     private void NetworkPlayerName_OnValueChanged(FixedString64Bytes oldValue, FixedString64Bytes newValue)
     {
         gameObject.name = "Player [" + newValue.ToString() + "]";
+    }
+
+    private void IsReady_OnValueChanged(bool oldValue, bool newValue)
+    {
+
     }
 
 }
